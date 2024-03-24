@@ -10,6 +10,9 @@ import { handlePosts } from './components/actions/post';
 import { reducer } from './components/reducer';
 
 import { legacy_createStore as createStore } from "redux";
+import ReduxEx01 from './components/reduxex01/ReduxEx01';
+import ReduxEx02 from './components/reduxex02/ReduxEx02';
+import ReduxEx03 from './components/reduxex03/ReduxEx03';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -55,21 +58,22 @@ const store = createStore(reducer);
 //   return { type: "후기", data };
 // };
 
-store.dispatch(handlePastaA("기본파스타"));
-console.log("기본", store.getState());
-store.dispatch(handlePastaB("매운파스타"));
-console.log("맵게", store.getState());
-store.dispatch(handlePastaC("로제파스타"));
-console.log("로제", store.getState());
-store.dispatch(handlePosts({ id: 1, content: "맛있어요" }));
-console.log("후기", store.getState());
-store.dispatch(handlePosts({ id: 2, content: "좋아요" }));
-console.log("후기두번째", store.getState());
+// store.dispatch(handlePastaA("기본파스타"));
+// console.log("기본", store.getState());
+// store.dispatch(handlePastaB("매운파스타"));
+// console.log("맵게", store.getState());
+// store.dispatch(handlePastaC("로제파스타"));
+// console.log("로제", store.getState());
+// store.dispatch(handlePosts({ id: 1, content: "맛있어요" }));
+// console.log("후기", store.getState());
+// store.dispatch(handlePosts({ id: 2, content: "좋아요" }));
+// console.log("후기두번째", store.getState());
 
 root.render(
   // <React.StrictMode>
     // <Provider store={store}>
-      <App />
+      // <App />
+      <ReduxEx03 />
     // </Provider>
   // </React.StrictMode>
 );
