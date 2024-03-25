@@ -13,6 +13,7 @@ import { legacy_createStore as createStore } from "redux";
 import ReduxEx01 from './components/reduxex01/ReduxEx01';
 import ReduxEx02 from './components/reduxex02/ReduxEx02';
 import ReduxEx03 from './components/reduxex03/ReduxEx03';
+import Reduxex04 from './components/reduxex04/Reduxex04';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -73,7 +74,7 @@ root.render(
   // <React.StrictMode>
     // <Provider store={store}>
       // <App />
-      <ReduxEx03 />
+      <Reduxex04 />
     // </Provider>
   // </React.StrictMode>
 );
