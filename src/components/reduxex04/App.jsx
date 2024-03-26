@@ -1,14 +1,23 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import OrderHistory from "./OrderHistory";
+import RegistOrder from "./RegistOrder";
 
 function App() {
 
-    const total_order_cnt = useSelector(state => state['totalOrderCnt']);
-    const orders = useSelector(state => state['orders']);
+    const totalOrderCnt = useSelector(state => state['totalOrderCnt']);
+
+    useEffect(() => {
+        console.log('[App] useEffect()');
+
+    });
 
     return(
         <>
-            App
+            <h4>총 주문 수량: {totalOrderCnt}건</h4>
+            <OrderHistory />
+            <br />
+            <RegistOrder />
         </>
     );
 }
