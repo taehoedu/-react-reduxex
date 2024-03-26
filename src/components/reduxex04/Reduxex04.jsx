@@ -43,7 +43,6 @@ const reducer = (state=initial_state, action) => {
             };
             state['orders'] = {...state['orders']};
             state['totalOrderCnt'] = Object.keys(state['orders']).length;
-
             return {...state};
 
         default:

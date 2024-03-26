@@ -10,6 +10,12 @@ export const generatNewOrderNo = () => {
     let seconds = today.getSeconds();
     let milliseconds = today.getMilliseconds();
 
-    return year + month + date + day + hours + minutes + seconds + milliseconds;
+    return '' + year + month + date + day + hours + minutes + seconds + milliseconds;
 
+}
+
+// menu price
+export const menuPrice = {
+    '자장면': 8000,
+    '짬뽕': 9000,
 }
