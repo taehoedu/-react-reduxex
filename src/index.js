@@ -14,6 +14,7 @@ import ReduxEx01 from './components/reduxex01/ReduxEx01';
 import ReduxEx02 from './components/reduxex02/ReduxEx02';
 import ReduxEx03 from './components/reduxex03/ReduxEx03';
 import ReduxEx04 from './components/reduxex04/ReduxEx04';
+import ReduxEx05 from './components/reduxex05/ReduxEx05';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -74,7 +75,7 @@ root.render(
   // <React.StrictMode>
     // <Provider store={store}>
       // <App />
-      <ReduxEx04 />
+      <ReduxEx05 />
     // </Provider>
   // </React.StrictMode>
 );
