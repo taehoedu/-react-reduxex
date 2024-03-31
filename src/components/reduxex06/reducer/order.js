@@ -2,16 +2,18 @@ import { generatNewOrderNo } from '../util'
 
 const initial_state = {
     orders: {
-        '10001': {
-            no: '10001',
-            menu: {
-                '자장면': 1,
-                '짬뽕': 2,
-            },
-            payment: false,
-        },
+        // '10001': {
+        //     no: '10001',
+        //     menu: {
+        //         '자장면': 1,
+        //         '짬뽕': 2,
+        //     },
+        //     payment: false,
+        // },
     },
-    totalOrderCnt: 1,
+    totalOrderCnt: {
+        cnt: 1,
+    },
 }
 
 export const orderReducer = (state=initial_state, action) => {
@@ -38,7 +40,7 @@ export const orderReducer = (state=initial_state, action) => {
                 payment: false,
             };
             state['orders'] = {...state['orders']};
-            state['totalOrderCnt'] = Object.keys(state['orders']).length;
+            state['totalOrderCnt']['cnt'] = Object.keys(state['orders']).length;
             return {...state};
 
         default:

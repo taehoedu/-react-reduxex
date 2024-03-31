@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { generatNewOrderNo } from '../util'
 import { orderReducer } from './order';
+import { reservationReducer } from './reservation'
 
 // const initial_state = {
 //     orders: {
@@ -13,10 +14,12 @@ import { orderReducer } from './order';
 //             payment: false,
 //         },
 //     },
-//     totalOrderCnt: 1,
+//     totalOrderCnt: {
+//         cnt: 1,
+//     },
 // }
 
-export const reducer = combineReducers({orders: orderReducer, });
+export const reducer = combineReducers({orders: orderReducer, reservations: reservationReducer});
 
 // export const reducer = (state=initial_state, action) => {
 

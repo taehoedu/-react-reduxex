@@ -15,7 +15,9 @@ const initial_state = {
             payment: false,
         },
     },
-    totalOrderCnt: 1,
+    totalOrderCnt: {
+        cnt: 1,
+    },
 }
 
 const reducer = (state=initial_state, action) => {
@@ -41,8 +43,8 @@ const reducer = (state=initial_state, action) => {
                     },
                     payment: false,
             };
-            state['orders'] = {...state['orders']};
-            state['totalOrderCnt'] = Object.keys(state['orders']).length;
+            // state['orders'] = {...state['orders']};
+            state['totalOrderCnt']['cnt'] = Object.keys(state['orders']).length;
             return {...state};
 
         default:

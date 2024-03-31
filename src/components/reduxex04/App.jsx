@@ -5,7 +5,7 @@ import RegistOrder from "./RegistOrder";
 
 function App() {
 
-    const totalOrderCnt = useSelector(state => state['totalOrderCnt']);
+    const totalOrderCnt = useSelector(state => state['totalOrderCnt']['cnt']);
 
     useEffect(() => {
         console.log('[App] useEffect()');

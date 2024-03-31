@@ -20,6 +20,7 @@ const reducer = (state = initial_state, action) => {
         case 'DELETE_STUDENT':
             let result = state.students.filter(student => student.id !== action.id);
             state.students = result;
+            state.totalCnt = state.students.length;
             return {...state};
 
         default:

@@ -11,7 +11,9 @@ const initial_state = {
             payment: false,
         },
     },
-    totalOrderCnt: 1,
+    totalOrderCnt: {
+        cnt: 1,
+    },
 }
 
 export const reducer = (state=initial_state, action) => {

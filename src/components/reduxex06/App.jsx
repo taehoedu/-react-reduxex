@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import OrderHistory from "./OrderHistory";
 import RegistOrder from "./RegistOrder";
+import ReservationList from "./ReservationList";
 
 function App() {
 
-    const totalOrderCnt = useSelector(state => state['orders']['totalOrderCnt']);
+    const totalOrderCnt = useSelector(state => state['orders']['totalOrderCnt']['cnt']);
 
     useEffect(() => {
         console.log('[App] useEffect()');
@@ -18,6 +19,8 @@ function App() {
             <OrderHistory />
             <br />
             <RegistOrder />
+            <br />
+            <ReservationList />
         </>
     );
 }
